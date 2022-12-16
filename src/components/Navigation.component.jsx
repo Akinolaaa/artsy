@@ -2,8 +2,8 @@ import {Outlet} from 'react-router-dom';
 import isearch from '../assets/search.svg';
 import icart from '../assets/cart.svg';
 import inotification from '../assets/notification.svg';
-import './Navigation.styles.scss'
-import Logo from './Logo.component';
+import './navigation.styles.scss'
+import Logo from './logo.component';
 
 
 export default function Navigation() {

@@ -1,17 +1,21 @@
-import FeaturedProducts from "../components/Featured-Products.component";
+import FeaturedProducts from "../components/featured-products.component";
 import itinyarrowL from '../assets/tiny-left-arrow.svg';
 import itinyarrowR from '../assets/tiny-right-arrow.svg';
+import ibluearrowR from '../assets/blue-arrow-right.svg';
+import iemailIcon from '../assets/iemail-icon.svg';
+import ilocationIcon from '../assets/ilocation-icon.svg';
+
 // import icreator2 from '../assets/guy1-img.svg';
 // import icreator3 from '../assets/guy2-img.svg';
-import './Home.styles.scss';
-import Logo from "../components/Logo.component";
+import './home.styles.scss';
+import Logo from "../components/logo.component";
 
 export default function Home() {
 
   return(
     <>
       <div className="px-10 mx-auto">
-        <h1 className='flex justify-center font-clash text-5xl leading-[4rem] text-gray mx-auto'> 
+        <h1 className='flex justify-center font-clash text-5xl leading-[4rem] text-gray font-[600] mx-auto'> 
           Photography is poetry & beautiful untold stories
         </h1>
       </div>
@@ -50,14 +54,18 @@ export default function Home() {
         </div>
       </div>
       {/*---End-Upcoming----------*/}
-      <div className="border-y py-3 px-6 flex justify-between">
-        <p>Explore marketplace</p>
-        <p>Arrow</p>
+
+      <div className="my-[4rem]">
+        <div className="border-y border-gray2 py-4 px-[4rem] flex justify-between items-center">
+          <p>Explore marketplace</p>
+          <img className="w-[2rem]" alt='blue-right-arrow' src={ibluearrowR} />
+        </div>
+        <div className="border-b border-gray2 py-4 px-[4rem] flex justify-between items-center">
+          <p>See auctions</p>
+          <img className="w-[2rem]" alt='blue-right-arrow' src={ibluearrowR} />
+        </div>
       </div>
-      <div className="border-b mb-5 py-3 px-6 flex justify-between">
-        <p>See auctions</p>
-        <p>Arrow</p>
-      </div>
+      
 
 
       {/*---Another Section----------*/}
@@ -83,6 +91,7 @@ export default function Home() {
         </div>
       </div>
 
+      
       <div className="flex flex-col items-center justify-between mt-[3rem] border p-3 font-basker font-gray2">
         <p>Newsletter</p>
         <p className="font-satoshi py-2">Subscribe to get daily updates on new drops & exciting deals </p>
@@ -91,8 +100,9 @@ export default function Home() {
           <p>A button</p>
         </div>
       </div>
-      
-      <div className="flex items-center justify-between px-[5rem]">
+
+      {/*--------------Footer------------ */}
+      <div className="flex items-center justify-between px-[5rem] mt-[1rem]">
         <Logo />
         <div className="flex flex-col">
           <p>Home</p>
@@ -106,9 +116,15 @@ export default function Home() {
           <p>Rates</p>
           <p>High Bids</p>
         </div>
-        <div className="flex flex-col">
-          <p>atrsystudios@gmail.com</p>
-          <p>Lagos, Nigeria</p>
+        <div className="flex flex-col h-[4rem] justify-between">
+          <div className='flex items-center' >
+            <img className="w-[1rem] h-[1rem] mr-2" alt='icon' src={iemailIcon} />
+            <p>atrsystudios@gmail.com</p>
+          </div>
+          <div className='flex items-center' >
+            <img className="w-[1rem] h-[1rem] mr-2" alt='icon' src={ilocationIcon} />
+            <p>Lagos, Nigeria</p>
+          </div>
         </div>
       </div>
       <div className="flex justify-center py-[1rem]">

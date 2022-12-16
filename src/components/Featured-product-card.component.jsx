@@ -4,7 +4,7 @@ import iimage1 from '../assets/series/image1.svg';
 import iimage2 from '../assets/series/image2.svg';
 import iimage3 from '../assets/series/image3.svg';
 import iimage4 from '../assets/series/image4.svg';
-import './Featured-product-card.styles.scss';
+import './featured-product-card.styles.scss';
 
 export default function FeaturedProductCard({image, reverse}){
   const flexRow = reverse ? 'flex-row-reverse' : ''

@@ -1,4 +1,4 @@
-import FeaturedProductCard from "./Featured-product-card.component";
+import FeaturedProductCard from "./featured-product-card.component";
 import iimage0 from '../assets/product-imgs/image.svg';
 import iimage1 from '../assets/product-imgs/image1.svg';
 import iimage2 from '../assets/product-imgs/image2.svg';
