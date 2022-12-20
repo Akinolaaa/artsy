@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import isearch from '../assets/search.svg';
 import iX from '../assets/iX.svg';
@@ -54,7 +54,7 @@ export default function Navigation() {
   }
 
   return(
-    <>
+    <div>
       { showNavPopUp && <NavPopUp effectOnClick={handleNavPopUp} /> }
       <div className="flex items-center max-sm1:items-start justify-between px-10 max-sm1:px-4 py-7 max-sm1:mt-[1rem] text-gray lg1:px-[8rem]">
         <div className='hidden max-sm1:block max-sm1:w-[33%]'>
@@ -77,6 +77,6 @@ export default function Navigation() {
         </div>
       </div>
       <Outlet/>
-    </>
+    </div>
   )
 }
