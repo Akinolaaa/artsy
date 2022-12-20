@@ -10,7 +10,7 @@ import Logo from "../components/logo.component";
 export default function Home() {
 
   return(
-    <div className="lg:px-[6rem] md:px-[2rem]">
+    <div className="lg1:px-[15rem] lg:px-[6rem] md:px-[2rem]">
       <div className="px-[5rem] max-sm1:px-[2rem]">
         <h1 className='flex justify-center font-clash text-5xl max-sm1:text-3xl leading-[4rem] text-gray font-[500] '> 
           Photography is poetry & beautiful untold stories
