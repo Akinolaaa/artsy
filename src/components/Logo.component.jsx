@@ -1,5 +1,7 @@
-export default function Logo() {
+export default function Logo( ) {
   return(
-    <p className='font-stix text-lg cursor-pointer'>ARTSY.</p>
+    
+    <p className='font-stix font-[600] text-[2rem] cursor-pointer'>ARTSY.</p>
+    
   )
 }

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm1: '700px',
@@ -16,7 +16,6 @@ module.exports = {
     //   'gray-dark': '#273444',
       'gray': '#292929',
       'gray2': '#333333',
-      white: '#FFFFFF',
 
     //   'gray-light': '#d3dce6',
     },

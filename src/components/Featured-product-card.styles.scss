@@ -1,5 +1,6 @@
 .img-thumbnails {
   position: relative;
+  box-sizing: content-box;
   border:1px solid red;
   & :nth-child(2){
     //transform: translateX(-50%)
