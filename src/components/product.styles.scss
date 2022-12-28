@@ -1,0 +1,17 @@
+.productdiv {
+    display: grid;
+    // justify-content: center;
+    margin: 2rem 1rem;
+}
+
+.productimg {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+.productdetail {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0;
+
+}
