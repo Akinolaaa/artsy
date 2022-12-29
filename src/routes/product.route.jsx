@@ -32,7 +32,7 @@ export default function Product() {
                       )
         }
       </div>
-      <div >
+      <div>
       <p className='loadmore'>Load more <span><img alt=""src={rightarrow}/></span></p>
       </div>
       <Footer />
