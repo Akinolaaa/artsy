@@ -2,7 +2,8 @@ import dropdown from '../assets/dropdown-arrow.png';
 import "../components/productpage.styles.scss";
 import Products from '../components/product';
 import products from '../products';
-import rightarrow from "../assets/right-arrow.svg"
+import rightarrow from "../assets/right-arrow.svg";
+import Footer from "../components/footer";
 export default function Product() {
 
   return(
@@ -34,6 +35,7 @@ export default function Product() {
       <div >
       <p className='loadmore'>Load more <span><img alt=""src={rightarrow}/></span></p>
       </div>
+      <Footer />
     </div>
   )
 }
