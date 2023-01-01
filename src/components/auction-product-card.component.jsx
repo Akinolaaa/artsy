@@ -19,7 +19,7 @@ export default function AuctionProductCard({ img }){
         </div>
       </div>
       <div className="pl-3">
-        <table className="w-1/2 my-[1rem]">
+        <table className="w-1/2 sm1:w-[75%] my-[1rem]">
           <tbody>
             <tr > 
               <td className="py-[.5rem] text-gray2">Creator:</td>
@@ -28,6 +28,10 @@ export default function AuctionProductCard({ img }){
             <tr> 
               <td>Date:</td>
               <td className="font-[600]">12/08/22</td>
+            </tr>
+            <tr className="max-sm1:hidden"> 
+              <td className="py-[.5rem]">Highest Bid:</td>
+              <td className="font-[600]">0.57 ETH</td>
             </tr>
           </tbody>
         </table>
