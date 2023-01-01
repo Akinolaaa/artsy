@@ -20,7 +20,7 @@ const NavPopUp = ({ effectOnClick }) => {
         text-[1.5rem] cursor-pointer mt-[1.5rem] h-[30%]' onClick={effectOnClick}>
         <Link to='/'> <p className='px-2'>Home</p> </Link>
         <Link to='/product'> <p className='px-2'>Marketplace</p> </Link>
-        <Link to='/'> <p className='px-2'>Auctions</p> </Link>
+        <Link to='/auction'> <p className='px-2'>Auctions</p> </Link>
         <Link to='/'> <p className='px-2'>Drop</p> </Link>
       </div>
       <div className='absolute bottom-[10%] right-[10%] border rounded-full p-5 bg-[#3341C1]'>
@@ -67,7 +67,7 @@ export default function Navigation() {
           text-base cursor-pointer '>
           <Link to='/'> <p className={`px-2 ${pathname==='/'? 'underline':''}` }>Home</p> </Link>
           <Link to='/product'> <p className={`px-2 ${getFirstDir(pathname)==='product'? 'underline':''}`}>Marketplace</p> </Link>
-          <Link to='/'> <p className={`px-2 ${getFirstDir(pathname)==='auctions'? 'underline':''}`}>Auctions</p> </Link>
+          <Link to='/auction'> <p className={`px-2 ${getFirstDir(pathname)==='auction'? 'underline':''}`}>Auctions</p> </Link>
           <Link to='/'> <p className={`px-2 ${getFirstDir(pathname)==='drop'? 'underline':''}`}>Drop</p> </Link>
         </div>
         <div className='flex justify-end cursor-pointer max-sm1:w-[33%]'>
