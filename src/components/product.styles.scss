@@ -15,3 +15,19 @@
     margin: .5rem 0;
 
 }
+
+@media (min-width:500px){
+    .productdetail {
+        flex-direction: column;
+        margin: 0;
+    }
+    .productdiv {
+        background: #FFFFFF;
+        box-shadow: 0px 34px 68px rgba(217, 225, 244, 0.36);
+        border-radius: 15px;
+        padding: 1rem;
+        
+    }
+  
+}
+
