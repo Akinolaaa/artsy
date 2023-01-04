@@ -5,10 +5,10 @@ export default function CountdownTimer({endDate}) {
   const [days, hrs, mins, secs] = useCountdown(endDate);
 
   return (
-    <div>
-      <p className='font-stix text-2xl'>
-        {`${days} days ${hrs} hours ${mins} minutes ${secs} seconds`}
+   
+      <p className='font-stix text-xl font-[400]'>
+        {`${hrs} hrs : ${mins} min : ${secs} s`}
       </p>
-    </div>
+
   )
 }
