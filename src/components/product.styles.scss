@@ -8,6 +8,7 @@
 }
 .productimg {
     // outline: 1px solid red;
+    
 }
 .productimg img {
     object-fit: contain;
@@ -20,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     margin: .5rem .5rem;
-    padding: .5rem 0;
+    padding: 0 1rem;
 
 }
 
