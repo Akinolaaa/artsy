@@ -1,7 +1,12 @@
+*{
+    // outline: 1px solid red;
+}
+
 .container {
     display: grid;
-    margin: 1rem;
-margin-right: 1rem;
+    margin: auto;
+    padding: 1rem;
+    // border: 10px solid green;
 }
 .fandsby {
     height: 60px;
@@ -55,16 +60,22 @@ margin-right: 1rem;
 .search2 {
     display: none;
 }
+.productmaindiv {
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
 @media (min-width: 500px) {
     .productmaindiv{
         display: grid;
         grid-template-columns: auto auto;
+        
     }
 }
 @media (min-width: 700px) {
     .container{
         grid-template-columns: 20% 70%;
         justify-content: space-between;
+        gap: 2rem;
     }
     .firstddiv {
         display: none;
