@@ -5,7 +5,7 @@ import drops from '../db/drops';
 export default function Drop() {
 
   return (
-    <div> 
+    <div className='sm1:px-[2rem] md:px-[5rem] lg:px-[9rem]'> 
       <div className="flex flex-col items-center justify-between gap-3 px-[3rem]">
         <h2 className="font-[700] text-3xl">Upcoming Drops</h2>
         <p className="text-center font-[400] text-[#616161]"> You may turn on notifications so that no drops will miss you</p>

@@ -15,7 +15,7 @@ const drops = [
   {
     id: 2,
     name: "Ginger Suburbs",
-    imagesrc: image2,
+    imagesrc: image4,
     deadline: "Jan 5, 2024 15:37:25",
     creator: "Tina Benson",
     status: "live"
@@ -31,7 +31,7 @@ const drops = [
   {
     id: 4,
     name: "Warped ‘99",
-    imagesrc: image4,
+    imagesrc: image2,
     deadline: "Jan 5, 2024 15:37:25",
     creator: "Aliyah Munirat",
     status: "ended"
