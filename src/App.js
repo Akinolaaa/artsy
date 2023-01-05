@@ -1,6 +1,7 @@
 import {Routes, Route} from 'react-router-dom';
 import Navigation from './components/navigation.component';
 import Auction from './routes/auction.route';
+import Drop from './routes/drop.route';
 import Home from './routes/home.route';
 import Product from './routes/product.route';
 
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Home />}></Route>
         <Route path='/product' element={<Product />}></Route>
         <Route path='/auction' element={<Auction />}></Route>
+        <Route path='/drop' element={<Drop />}></Route>
       </Route>
     </Routes>
   );
