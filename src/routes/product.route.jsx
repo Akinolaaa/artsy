@@ -44,16 +44,22 @@ import dropdownup from '../assets/dropdown-up.svg';
 import search from '../assets/search.svg';
 import filter from '../assets/filter.svg'
 import "../components/productpage.styles.scss";
+import Marketplacenav from '../components/Marketplacenav';
 import Products from '../components/product';
-import products from '../products';
+import products from '../db/products';
 import rightarrow from "../assets/right-arrow.svg";
 import Footer from "../components/footer";
+import { useNavigate } from 'react-router-dom';
 export default function Product() {
+const navigate = useNavigate()
+function showDescription(){
+  navigate('/productdescription')
+}
 
   return(
     <div className="container">
        <div className='firstddiv'>
-        <h2>Home/Marketplace/Editorials</h2>
+       <Marketplacenav />
         <p>Showing 1-5 of 18 results</p>
       </div>
       <div className='seconddiv'>
@@ -142,6 +148,7 @@ export default function Product() {
                                   name={product.name}
                                   img={product.src}
                                   price={product.price}
+                                  click={showDescription}
                                   /> 
                       )
         }
