@@ -1,3 +1,4 @@
+
 .productdiv {
     display: grid;
     gap: 5%;
@@ -21,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     margin: .5rem .5rem;
-    padding: 0 1rem;
+   padding: .5rem 0;
 
 }
 
@@ -42,4 +43,11 @@
         border-radius: 15px;
         padding: .5rem 0;
 }
+
+.productdetail{
+    padding: 0 1rem;
+}
+    .productprice {
+        font-weight: bold;
+    }
 }

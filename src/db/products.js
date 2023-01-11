@@ -1,12 +1,12 @@
-import art1 from './assets/series/art1.png';
-import art2 from './assets/series/art2.png';
-import art3 from './assets/series/art3.png';
-import art4 from './assets/series/art4.png';
-import art5 from './assets/series/art5.png';
-import art6 from './assets/series/art6.png';
-import art7 from './assets/series/art7.png';
-import art8 from './assets/series/art8.png';
-import art9 from './assets/series/art9.png';
+import art1 from '../assets/series/art1.png';
+import art2 from '../assets/series/art2.png';
+import art3 from '../assets/series/art3.png';
+import art4 from '../assets/series/art4.png';
+import art5 from '../assets/series/art5.png';
+import art6 from '../assets/series/art6.png';
+import art7 from '../assets/series/art7.png';
+import art8 from '../assets/series/art8.png';
+import art9 from '../assets/series/art9.png';
 
 const products = [
     {

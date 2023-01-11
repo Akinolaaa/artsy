@@ -7,8 +7,8 @@ export default function Products(props) {
     
 
     return (
-        <div className="productdiv">
-            <div   className="productimg">
+        <div className="productdiv" onClick={props.click}>
+            <div className="productimg">
             <img  src={props.img} alt=""/>
             </div>
             <div className='productdetail'>
