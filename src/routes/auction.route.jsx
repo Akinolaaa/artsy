@@ -5,10 +5,10 @@ import iimage2 from '../assets/auction/image2.svg'
 import Carousel from "../components/carousel.component";
 import img1 from "../assets/carousel/image1.svg"
 import img2 from "../assets/carousel/image2.svg"
-import img3 from "../assets/carousel/image3.svg"
+import img3 from "../assets/carousel/image3.svg";
 
 export default function Auction() {
-
+  
   return(
     <div> 
       <p className="px-[2rem] sm1:px-[5rem] mt-[2rem] sm1:font-bold">
