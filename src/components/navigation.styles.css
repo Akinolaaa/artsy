@@ -1,0 +1,17 @@
+.nav-icon {
+  height: 30px;
+}
+
+.notif {
+  position: relative;
+}
+.notif::after {
+  content: "";
+  padding: 2px;
+  background-color: red;
+  position: absolute;
+  display: inline-block;
+  right: 20%;
+  top: 10%;
+  border-radius: 9999px;
+}/*# sourceMappingURL=navigation.styles.css.map */

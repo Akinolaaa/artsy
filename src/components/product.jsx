@@ -1,14 +1,15 @@
 import './product.styles.scss';
+import { Link } from 'react-router-dom';
 
 
 
 export default function Products(props) {
 
-    
-
     return (
-        <div className="productdiv" onClick={props.click}>
-            <div className="productimg">
+
+        <div className="productdiv" key={props.key} >
+            {/* onClick={props.click} */}
+            <div className="productimg" key={props.key}>
             <img  src={props.img} alt=""/>
             </div>
             <div className='productdetail'>
@@ -16,5 +17,6 @@ export default function Products(props) {
             <p className="productprice">{props.price}</p>
             </div>
         </div>
+        
     )
 }

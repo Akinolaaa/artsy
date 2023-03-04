@@ -1,61 +1,31 @@
-// import dropdown from '../assets/dropdown-arrow.png';
-// import "../components/productpage.styles.scss";
-// import Products from '../components/product';
-// import products from '../products';
-// import rightarrow from "../assets/right-arrow.svg";
-// import Footer from "../components/footer";
-// export default function Product() {
-
-//   return(
-//     <div className="container">
-//       <div>
-//     <h2>Home/Marketplace/Editorials</h2>
-//       </div>
-//       <p>Showing 1-5 of 18 results</p>
-//       <div className='fandsby'>
-//         <div className='filter'>
-//           <p>Filter</p>
-//           <img src={dropdown} alt=""/>
-//         </div>
-//         <div className='sortby'>
-//           <p>Sort by</p>
-//           <img src={dropdown} alt=""/>
-//         </div>
-//       </div>
-//       <div>
-//         {products.map(product => <Products
-//                                   key={product.id}
-//                                   name={product.name}
-//                                   img={product.src}
-//                                   price={product.price}
-//                                   /> 
-//                       )
-//         }
-//       </div>
-//       <div>
-//       <p className='loadmore'>Load more <span><img alt=""src={rightarrow}/></span></p>
-//       </div>
-//       <Footer />
-//     </div>
-//   )
-// }
 import dropdown from '../assets/dropdown-arrow.png';
 import dropdownup from '../assets/dropdown-up.svg';
-import search from '../assets/search.svg';
+// import search from '../assets/search.svg';
 import filter from '../assets/filter.svg'
+import { Link } from 'react-router-dom';
 import "../components/productpage.styles.scss";
 import Marketplacenav from '../components/Marketplacenav';
 import Products from '../components/product';
 import products from '../db/products';
 import rightarrow from "../assets/right-arrow.svg";
 import Footer from "../components/footer";
-import { useNavigate } from 'react-router-dom';
-export default function Product() {
-const navigate = useNavigate()
-function showDescription(){
-  navigate('/productdescription')
-}
+// import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
 
+
+
+ export default function Product() {
+
+  
+  
+    function filterArt(event) {
+       
+      const searchString = event.target.value.toLocaleLowerCase();
+      const filteredMonsters = this.state.monsters.filter((monster) => {
+        return monster.name.toLocaleLowerCase().includes(searchString)
+      });
+     
+    }
   return(
     <div className="container">
        <div className='firstddiv'>
@@ -64,8 +34,14 @@ function showDescription(){
       </div>
       <div className='seconddiv'>
             <div className='search1'>
-            <img src={search} alt="search"/>
-            <input type="search" id="search" name="Search" placeholder={<img src={search} alt="search"/> + "Search"}/>
+            {/* <img src={search} alt="search"/> */}
+            <input type="search" 
+                   id="search" 
+                   name="Search" 
+                   placeholder="Search"
+                  //  onChange={}
+                   
+              />
             
             
 
@@ -97,7 +73,7 @@ function showDescription(){
               <div>
               <h3>By price <span><img src={dropdownup} alt=""/></span></h3>
               <p>$100.00 - $150.00</p>
-              <p>Scroller</p>
+              <input type="range"/>
               </div>
 
               <div>
@@ -143,15 +119,19 @@ function showDescription(){
       </div>
      
       <div className='productmaindiv'>
-        {products.map(product => <Products
+       {products.map(product =>   <Link to={`/productdescription/${product.id}`}>
+                                  <Products
                                   key={product.id}
                                   name={product.name}
                                   img={product.src}
-                                  price={product.price}
-                                  click={showDescription}
+                                  // click={showDescription}
                                   /> 
+                                  </Link>
+                                  
+       
                       )
         }
+      
       </div>
       
       <div >
@@ -164,13 +144,9 @@ function showDescription(){
 
 
 
-      {/* <div>
-<p>See 1-6 of 15 results</p>
-<div>
-  <p>Sort by</p>
-  <img src={dropdown} alt=""/>
-</div>
-</div> */}
+     
     </div>
   )
+  
 }
+

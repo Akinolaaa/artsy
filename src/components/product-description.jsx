@@ -1,13 +1,18 @@
 import './product-description.styles.scss';
 import love from '../assets/love.svg';
-
 import { useState } from 'react';
 import dropdown from '../assets/dropdown-arrow.png';
 import Marketplacenav from './Marketplacenav';
-import art from '../assets/series/art1.png'
+import products from '../db/products';
+import {  useParams } from 'react-router-dom';
 
 export default function Productdescription() {
 
+    const { artId } = useParams();
+    const arts = products.find(art =>  art.id === artId);
+    
+    const {name, src,price} = arts
+    
     
     const [count, updateCount] = useState(0);
     function increaseCount(){
@@ -17,22 +22,23 @@ export default function Productdescription() {
         return updateCount(count--);
     }
     return (
+      
     <div  className='container2'>
         <div className='firstgrid'>
             <Marketplacenav />
-            
+          
         </div>
         <div className='secondgrid'>
             <div className='productcontainer'>
             <div className='productimage'>
-                <img  src={art} alt=""/>
+                <img  src={src} alt=""/>
             </div>
 
 
             <div>
                 <div className='nameandprice'>
-                    <h2>art1</h2>
-                    <p>5dollars</p>
+                    <h2>{name}</h2> 
+                    <p>{price}</p>
                 </div>
                 <div className='productdetailss'>
                     <div className='productdetails'>

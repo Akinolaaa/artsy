@@ -10,63 +10,63 @@ import art9 from '../assets/series/art9.png';
 
 const products = [
     {
-        id: 1,
+        id: "1",
         name: "PHILOMENA '22",
         src: art1,
         price: "$3.90",
 
     },
     {
-        id: 2,
+        id: '2',
         name: "BOOLEAN EGYPTIAN",
         src: art2,
         price: "$5.70",
 
     },
     {
-        id: 3,
+        id: '3',
         name: "BLANC",
         src: art3,
         price: "$3.90",
 
     },
     {
-        id: 4,
+        id: '4',
         name: "ELLIPSIA",
         src: art4,
         price: "$7.00",
 
     },
     {
-        id: 5,
+        id: '5',
         name: "THE LAWMAKERS",
         src: art5,
         price: "$3.90",
 
     },
     {
-        id: 6,
+        id: '6',
         name: "VEIL",
         src: art6,
         price: "$3.90",
 
     },
     {
-        id: 7,
+        id: '7',
         name: "ALTERNATING",
         src: art7,
         price: "$3.90",
 
     },
     {
-        id: 8,
+        id: '8',
         name: "ROSEMARY '22",
         src: art8,
         price: "$3.90",
 
     },
     {
-        id: 9,
+        id: '9',
         name: "BEVERLY",
         src: art9,
         price: "$3.90",
