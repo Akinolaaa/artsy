@@ -18,14 +18,14 @@ import Footer from "../components/footer";
 
   
   
-    function filterArt(event) {
+    // function filterArt(event) {
        
-      const searchString = event.target.value.toLocaleLowerCase();
-      const filteredMonsters = this.state.monsters.filter((monster) => {
-        return monster.name.toLocaleLowerCase().includes(searchString)
-      });
+    //   const searchString = event.target.value.toLocaleLowerCase();
+    //   const filteredMonsters = this.state.monsters.filter((monster) => {
+    //     return monster.name.toLocaleLowerCase().includes(searchString)
+    //   });
      
-    }
+    // }
   return(
     <div className="container">
        <div className='firstddiv'>
@@ -90,7 +90,7 @@ import Footer from "../components/footer";
               <h3>Collection year <span><img src={dropdown} alt=""/></span></h3>
               </div>
             </div>
-         </div>
+        </div>
       </div>
 
 
@@ -98,7 +98,7 @@ import Footer from "../components/footer";
 
 
 
-     
+    
       <div className='thirddiv'>
       <div className='fandsby'>
         <div className='filter'>
@@ -117,9 +117,9 @@ import Footer from "../components/footer";
           <img src={dropdown} alt=""/>
         </div>
       </div>
-     
+    
       <div className='productmaindiv'>
-       {products.map(product =>   <Link to={`/productdescription/${product.id}`}>
+      {products.map(product =>   <Link to={`/productdescription/${product.id}`}>
                                   <Products
                                   key={product.id}
                                   name={product.name}
@@ -128,7 +128,7 @@ import Footer from "../components/footer";
                                   /> 
                                   </Link>
                                   
-       
+      
                       )
         }
       
@@ -144,7 +144,7 @@ import Footer from "../components/footer";
 
 
 
-     
+    
     </div>
   )
   

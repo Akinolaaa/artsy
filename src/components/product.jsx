@@ -1,5 +1,4 @@
 import './product.styles.scss';
-import { Link } from 'react-router-dom';
 
 
 
