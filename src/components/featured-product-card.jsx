@@ -23,7 +23,7 @@ export default function FeaturedProductCard({name, image, reverse}){
           </div>
           
         </div>
-        {/* ------------- */}
+        {/* ----------------------------------- */}
 
         <div className='flex flex-col justify-between pl-2 w-1/2 max-sm1:w-full'>
           <h3 className='font-stix font-[700] text-3xl text-gray2 max-sm1:hidden'> {name}</h3>
