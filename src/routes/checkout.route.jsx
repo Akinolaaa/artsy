@@ -3,7 +3,7 @@ import CheckoutItem from "../components/checkout-item.component";
 import { CartContext } from "../store/cart-context";
 
 export default function Checkout() {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, total, cartCount } = useContext(CartContext);
   return(
     <div>
       {
@@ -21,20 +21,20 @@ export default function Checkout() {
       <tbody>
         <tr className="px-4">
           <td>Products in cart:</td>
-          <td className="text-right">{cartItems.length} items</td>
+          <td className="text-right">{cartCount} items</td>
         </tr>
         <tr>
           <td>Shipping:</td>
-          <td className="text-right">{cartItems.length} items</td>
+          <td className="text-right">${500}</td>
         </tr>
         <tr>
           <td>Total:</td>
-          <td className="text-right">{cartItems.length} items</td>
+          <td className="text-right">${total}</td>
         </tr>
         <tr>------------------------------------------------</tr>
         <tr>
           <td>Grand Total:</td>
-          <td className="text-right">{cartItems.length} items</td>
+          <td className="text-right">${total + 500}</td>
         </tr>
       </tbody>
     </table>
