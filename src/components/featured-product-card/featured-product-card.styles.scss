@@ -1,23 +1,24 @@
 .img-thumbnails {
+  display: flex;
   position: relative;
   box-sizing: content-box;
-  border:1px solid red;
   & :nth-child(2){
     //transform: translateX(-50%)
     left:-10%;
   }
   & :nth-child(3){
-    left: -20%;
+    right: 1.6rem;
+    // left: -20%;
   }
   & :nth-child(4){
-    left: -30%;
+    right: 3.2rem;
   }
   & :nth-child(5){
-    left: -40%;
+    right: 4.8rem;
   }
   .img-thumbnail {
     height: 25px;
-    position:relative;
+    position: relative;
     display: inline;
   }
 }

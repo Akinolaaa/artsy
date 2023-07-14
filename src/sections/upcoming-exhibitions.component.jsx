@@ -5,7 +5,7 @@ import "./upcoming-exhibitions.styles.scss";
 export default function UpcomingExhibitions(){
 
   return(
-    <div className="upcoming text-white">
+    <div className="upcoming text-white tracking-wider">
       <p className="border-b w-auto text-xl">See Upcoming Auctions and Exhibitions</p>
 
       <div className="upcoming-sub-div">

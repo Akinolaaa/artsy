@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react";
 import { addCartItem, removeCartItem, deleteCartItem } from "../helpers";
+
 export const CartContext = createContext({
   cartItems: [],
   cartCount: 0,
@@ -16,7 +17,7 @@ export const CART_ACTION_TYPES = {
 const INITIAL_STATE = {
   cartItems: [],
   cartCount: 0,
-  total: 0
+  cartTotal: 0
 }
 
 
@@ -39,13 +40,14 @@ export const CartProvider = ({ children }) => {
   const { cartItems, cartCount, cartTotal } = state;
 
   const updateCartItemsReducer = (newCartItems) => {
-    const newCartCount = newCartItems.reduce((total, cartItem) => 
-      total + cartItem.quantity
-    ,0);
+    const newCartCount = newCartItems.reduce((total, cartItem) => {
+      console.log(total, cartItem.quantity)
+      return total + cartItem.quantity
+    },0);
     const newCartTotal = newCartItems.reduce((total, cartItem) => 
       total + (cartItem.quantity * cartItem.price)
     ,0);
-
+    console.log("contex cartCount", newCartCount)
     const payload = {
       cartItems: newCartItems,
       cartCount: newCartCount,

@@ -8,7 +8,7 @@ import Marketplacenav from '../components/Marketplacenav';
 import Products from '../components/product';
 import products from '../db/products';
 import rightarrow from "../assets/right-arrow.svg";
-import Footer from "../components/footer";
+import Footer from "../components/footer/footer.component";
 // import { useNavigate } from 'react-router-dom';
 // import { useState } from 'react';
 

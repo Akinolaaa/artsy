@@ -4,9 +4,15 @@ export const addCartItem = (cartItems, item) => {
   );
 
   if (existingCartItem) {
-    return cartItems.map((cartItem) => cartItem.id === item.id ?
-      {...cartItem, quantity: cartItem.quantity + 1} : cartItem
-    );
+    if(item.quantity) {
+      return cartItems.map((cartItem) => cartItem.id === item.id ?
+        {...cartItem, quantity: cartItem.quantity + item.quantity} : cartItem
+      );
+    } else {
+      return cartItems.map((cartItem) => cartItem.id === item.id ?
+        {...cartItem, quantity: cartItem.quantity + 1} : cartItem
+      );
+    }
   }
   return [...cartItems, {...item, quantity: 1}]
 }

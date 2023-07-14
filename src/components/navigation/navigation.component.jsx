@@ -34,7 +34,7 @@ const Navigation = ()  => {
   return(
     <>
       { showNavPopUp && <NavPopUp effectOnClick={handleNavPopUp} /> }
-      <div className="flex items-center max-sm1:items-start justify-between px-10 max-sm1:px-4 py-7 max-sm1:mt-[1rem] text-gray lg1:px-[8rem]">
+      <div className="flex items-center min-w-max max-sm1:items-start justify-between px-10 max-sm1:px-4 py-7 max-sm1:mt-[1rem] text-gray lg1:px-[8rem]">
         <div className='hidden max-sm1:block max-sm1:w-[33%]'>
           <img alt='sandwich-icon' className='nav-icon px-3 py-1' src={isandwich} onClick={handleNavPopUp} />
         </div>

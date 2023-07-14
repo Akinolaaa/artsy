@@ -1,4 +1,4 @@
-import AuctionProductCard from "../components/auction-product-card.component";
+import AuctionProductCard from "../components/auction-product-card/auction-product-card.component";
 import rightarrow from "../assets/right-arrow.svg";
 import iimage1 from '../assets/auction/image1.svg'
 import iimage2 from '../assets/auction/image2.svg'

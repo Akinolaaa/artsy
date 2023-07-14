@@ -1,9 +1,9 @@
-import irightarrow from '../assets/right-arrow.svg';
-import iimage0 from '../assets/series/image.svg';
-import iimage1 from '../assets/series/image1.svg';
-import iimage2 from '../assets/series/image2.svg';
-import iimage3 from '../assets/series/image3.svg';
-import iimage4 from '../assets/series/image4.svg';
+import irightarrow from '../../assets/right-arrow.svg';
+import iimage0 from '../../assets/series/image.svg';
+import iimage1 from '../../assets/series/image1.svg';
+import iimage2 from '../../assets/series/image2.svg';
+import iimage3 from '../../assets/series/image3.svg';
+import iimage4 from '../../assets/series/image4.svg';
 import './featured-product-card.styles.scss';
 
 export default function FeaturedProductCard({name, image, reverse}){
@@ -21,24 +21,27 @@ export default function FeaturedProductCard({name, image, reverse}){
               <img alt='right-arrow' className='w-7' src={irightarrow} />
             </div>
           </div>
-          
+          {/* ------------- */}   
         </div>
-        {/* ----------------------------------- */}
 
         <div className='flex flex-col justify-between pl-2 w-1/2 max-sm1:w-full'>
           <h3 className='font-stix font-[700] text-3xl text-gray2 max-sm1:hidden'> {name}</h3>
           <p className='max-sm1:py-[1rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur</p>
-          <div className='flex justify-between items-center pt-3 px-1 max-sm1:justify-start'>
-            <div className='img-thumbnails'>
-              <img className='img-thumbnail' alt='simages' src={iimage0}/>
-              <img className='img-thumbnail' alt='simages' src={iimage1}/>
-              <img className='img-thumbnail' alt='simages' src={iimage2}/>
-              <img className='img-thumbnail' alt='simages' src={iimage3}/>
-              <img className='img-thumbnail' alt='simages' src={iimage4}/>
+          <div className='flex items-center pt-3 px-1 justify-between w-full'>
+            <div className='flex'>
+              <div className='flex w-[5rem]'>
+                <img className='h-[25px]' alt='simages' src={iimage0}/>
+                <img className='-translate-x-3 h-[25px]' alt='simages' src={iimage1}/>
+                <img className='-translate-x-6 h-[25px]' alt='simages' src={iimage2}/>
+                <img className='-translate-x-9 h-[25px]' alt='simages' src={iimage3}/>
+                <img className='-translate-x-12 h-[25px]' alt='simages' src={iimage4}/>
+              </div>
+              <div>
+                <p>64 major creators</p>
+              </div>
             </div>
-            <p>64 major creators</p>
-            <div className='flex items-center max-sm1:hidden border rounded-full px-1 py-2'>
-              <img alt='right-arrow' className='w-7 ' src={irightarrow} />
+            <div className='flex items-end justify-end max-sm1:hidden border rounded-full mr-2 px-1 py-2'>
+              <img alt='right-arrow' className='w-7' src={irightarrow} />
             </div>
           </div>
         </div>

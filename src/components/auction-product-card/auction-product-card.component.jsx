@@ -1,5 +1,5 @@
 import "./auction-product-card.styles.scss";
-import iredHeart from '../assets/auction/red-heart.svg';
+import iredHeart from '../../assets/auction/red-heart.svg';
 
 
 export default function AuctionProductCard({ img }){

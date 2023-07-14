@@ -1,5 +1,3 @@
-import './carousel.styles.scss';
-
 export default function Carousel({images}) {
 
   return(
