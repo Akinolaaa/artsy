@@ -2,7 +2,7 @@ import AuctionProductCard from "../components/auction-product-card/auction-produ
 import rightarrow from "../assets/right-arrow.svg";
 import iimage1 from '../assets/auction/image1.svg'
 import iimage2 from '../assets/auction/image2.svg'
-import Carousel from "../components/carousel.component";
+import Carousel from "../components/carousel/carousel.component";
 import img1 from "../assets/carousel/image1.svg"
 import img2 from "../assets/carousel/image2.svg"
 import img3 from "../assets/carousel/image3.svg";

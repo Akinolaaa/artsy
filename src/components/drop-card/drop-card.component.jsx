@@ -1,4 +1,4 @@
-import CountdownOverlap from './countdown-overlap.component';
+import CountdownOverlap from '../countdown/countdown-overlap.component';
 
 export default function DropCard({name, imagesrc, status, deadline, creator}) {
 
@@ -11,12 +11,13 @@ export default function DropCard({name, imagesrc, status, deadline, creator}) {
   return(
     <div className='px-3 sm1:flex sm1:gap-3 sm1:items-center'>
       <div className='relative rounded-lg h-[15rem] sm1:h-[17rem] lg:h-[16rem] w-full sm1:my-[2rem]' 
-        style={{backgroundImage: `url(${imagesrc})`, backgroundPosition: 'center'}} >
+        style={{backgroundImage: `url(${imagesrc})`, backgroundPosition: 'center'}}>
         <div className='h-full w-full bg-black/20 z-10 rounded-lg'>
           <div className={`absolute sm1:hidden top-[5%] right-[3%] ${statusBg[status]} rounded-md w-[7rem] py-1`}>
             <p className='uppercase text-white text-sm text-center'>{status}</p> 
           </div>
-          {status==="ended" ? 
+          {
+            status==="ended" ? 
             <div className='absolute top-[65%] left-[0%] w-full px-4'>
               <div className='border border-white rounded-lg py-2 pl-4 text-white font-[400] bg-[#F5F4F43D]'>
                 <p className=''>Auction Ended</p>
@@ -26,7 +27,7 @@ export default function DropCard({name, imagesrc, status, deadline, creator}) {
               </div>
             </div> 
             :
-            <CountdownOverlap deadline={"Jan 5, 2024 15:37:25"} />
+            <CountdownOverlap deadline={"Jan 5, 2026 15:37:25"} />
           }
         </div>
       </div>

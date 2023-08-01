@@ -5,7 +5,7 @@ import isearch from '../../assets/search.svg';
 import icart from '../../assets/cart.svg';
 import isandwich from '../../assets/sandwich.svg';
 import inotification from '../../assets/notification.svg';
-import Logo from '../logo.component';
+import Logo from '../logo/logo.component';
 import NavPopUp from './navpopup.component';
 import './navigation.styles.scss';
 

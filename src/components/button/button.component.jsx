@@ -1,13 +1,13 @@
 const BlackButton = ({children}) => {
   return(
-    <button className="text-white bg-black py-1 px-4">
+    <button className="whitespace-nowrap text-white bg-[#333333] py-1 px-4">
       {children}
     </button>
   )
 }
 const WhiteButton = ({children}) => {
   return(
-    <button className=" border rounded font-black font-satoshi text-lg
+    <button className="whitespace-nowrap border rounded font-black font-satoshi text-lg
     bg-white py-[1rem] px-[4rem]">
       {children}
     </button>

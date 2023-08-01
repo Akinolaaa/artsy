@@ -41,13 +41,11 @@ export const CartProvider = ({ children }) => {
 
   const updateCartItemsReducer = (newCartItems) => {
     const newCartCount = newCartItems.reduce((total, cartItem) => {
-      console.log(total, cartItem.quantity)
       return total + cartItem.quantity
     },0);
     const newCartTotal = newCartItems.reduce((total, cartItem) => 
       total + (cartItem.quantity * cartItem.price)
     ,0);
-    console.log("contex cartCount", newCartCount)
     const payload = {
       cartItems: newCartItems,
       cartCount: newCartCount,

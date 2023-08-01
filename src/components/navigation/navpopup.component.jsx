@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import iX from '../../assets/iX.svg';
 import ichat from '../../assets/chat-icon.svg';
-import Logo from '../logo.component';
+import Logo from '../logo/logo.component';
 import './navigation.styles.scss';
 
 const NavPopUp = ({ effectOnClick }) => {

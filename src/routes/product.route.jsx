@@ -3,14 +3,12 @@ import dropdownup from '../assets/dropdown-up.svg';
 // import search from '../assets/search.svg';
 import filter from '../assets/filter.svg'
 import { Link } from 'react-router-dom';
-import "../components/productpage.styles.scss";
-import Marketplacenav from '../components/Marketplacenav';
-import Products from '../components/product';
+import Marketplacenav from '../components/marketplace-nav/marketplace-nav';
 import products from '../db/products';
 import rightarrow from "../assets/right-arrow.svg";
 import Footer from "../components/footer/footer.component";
-// import { useNavigate } from 'react-router-dom';
-// import { useState } from 'react';
+import ProductCard from '../components/product-card/product-card';
+import "../routes/product-route.styles.scss";
 
 
 
@@ -58,15 +56,15 @@ import Footer from "../components/footer/footer.component";
                 <h3>By category <span><img src={dropdownup} alt=""/></span></h3>
                 <div>
                 <input type="checkbox" id="Editorials" name="Editorials" value="Editorials" />
-                <label for="Editorials">  Editorials</label><br />
+                <label htmlFor="Editorials">  Editorials</label><br />
                 <input type="checkbox" id="Fashion" name="Fashion" value="Fashion" />
-                <label for="Fashion">  Fashion</label><br />
+                <label htmlFor="Fashion">  Fashion</label><br />
                 <input type="checkbox" id="Optics" name="Optics" value="Optics" />
-                <label for="Optics">  Optics</label><br />
+                <label htmlFor="Optics">  Optics</label><br />
                 <input type="checkbox" id="Art and Museum" name="Art and Museum" value="Editorials" />
-                <label for="Art and Museum">  Art and Museum</label><br />
+                <label htmlFor="Art and Museum">  Art and Museum</label><br />
                 <input type="checkbox" id="Nature" name="Nature" value="Nature" />
-                <label for="Nature">  Nature</label><br />
+                <label htmlFor="Nature">  Nature</label><br />
                 </div>
               </div>
 
@@ -119,9 +117,9 @@ import Footer from "../components/footer/footer.component";
       </div>
     
       <div className='productmaindiv'>
-      {products.map(product =>   <Link to={`/productdescription/${product.id}`}>
-                                  <Products
-                                  key={product.id}
+      {products.map(product =>   <Link key={product.id} to={`/product/productdescription/${product.id}`}>
+                                  <ProductCard
+                                  
                                   name={product.name}
                                   img={product.src}
                                   // click={showDescription}

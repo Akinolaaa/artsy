@@ -1,6 +1,6 @@
 import iemailIcon from '../../assets/iemail-icon.svg';
 import ilocationIcon from '../../assets/ilocation-icon.svg';
-import Logo from "../../components/logo.component";
+import Logo from "../../components/logo/logo.component";
 
 const Footer = () => {
 

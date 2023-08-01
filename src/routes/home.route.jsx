@@ -9,7 +9,7 @@ import Footer from "../components/footer/footer.component";
 export default function Home() {
 
   return(
-    <div className="xl:px-[23rem] lg1:px-[15rem] lg:px-[6rem] md:px-[2rem] ">
+    <div className="md:px-[2rem] relative left-1/2 -translate-x-1/2 max-w-screen-md">
       <div className="px-[5rem] max-sm1:px-[2rem]">
         <h1 className='flex justify-center font-clash text-5xl max-sm1:text-3xl leading-[4rem] text-gray font-[500] '> 
           Photography is poetry & beautiful untold stories

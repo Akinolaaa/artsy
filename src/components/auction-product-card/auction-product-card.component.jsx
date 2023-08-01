@@ -1,5 +1,6 @@
 import "./auction-product-card.styles.scss";
 import iredHeart from '../../assets/auction/red-heart.svg';
+import Button from "../button/button.component";
 
 
 export default function AuctionProductCard({ img }){
@@ -42,7 +43,7 @@ export default function AuctionProductCard({ img }){
           <p className="pb-3"> Current Bid</p>
           <p className="font-[700]">0.987 ETH</p>
         </div>
-        <p>Place bid</p>
+        <Button>Place Bid</Button>
       </div>
     </div>
   )

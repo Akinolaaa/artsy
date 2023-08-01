@@ -20,13 +20,13 @@ export default function CheckoutItem({ checkoutItem }) {
   }
 
   return (
-    <div className="flex gap-2"> 
+    <div className="flex gap-2 border-b border-[#D0BFBF] py-2"> 
       <img src={src} className='h-[7rem]' alt={`item-${name}`}/>
       <div className="flex flex-col justify-between w-full">
         <p>Editorials</p>
         <p>{name}</p>
         {/*-------- + quantity - ---------------*/}
-        <div className="flex items-center rounded-full w-1/2">
+        <div className="flex items-center rounded-full w-1/2 cursor-pointer">
           <div className="flex justify-center items-center border px-3 rounded-tl-lg rounded-bl-lg"
           onClick={decrementItem}>
             <span>-</span>

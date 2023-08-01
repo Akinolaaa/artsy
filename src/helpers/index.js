@@ -4,17 +4,11 @@ export const addCartItem = (cartItems, item) => {
   );
 
   if (existingCartItem) {
-    if(item.quantity) {
-      return cartItems.map((cartItem) => cartItem.id === item.id ?
-        {...cartItem, quantity: cartItem.quantity + item.quantity} : cartItem
-      );
-    } else {
-      return cartItems.map((cartItem) => cartItem.id === item.id ?
-        {...cartItem, quantity: cartItem.quantity + 1} : cartItem
-      );
-    }
+    return cartItems.map((cartItem) => cartItem.id === item.id ?
+      {...cartItem, quantity: cartItem.quantity + 1} : cartItem
+    );
   }
-  return [...cartItems, {...item, quantity: 1}]
+  return [...cartItems, {...item, quantity: 1 }]
 }
 
 export const removeCartItem = (cartItems, productToRemove) => {

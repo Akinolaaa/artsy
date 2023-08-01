@@ -8,7 +8,7 @@ import art7 from '../assets/series/art7.png';
 import art8 from '../assets/series/art8.png';
 import art9 from '../assets/series/art9.png';
 
-const products = [
+const PRODUCTS = [
     {
         id: "1",
         name: "PHILOMENA '22",
@@ -74,4 +74,4 @@ const products = [
     },
 ]
 
-export default products;
+export default PRODUCTS;
