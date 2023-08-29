@@ -6,6 +6,7 @@ import dropdown from '../../assets/dropdown-arrow.png';
 import Marketplacenav from '../marketplace-nav/marketplace-nav';
 import PRODUCTS from '../../db/products';
 import {  useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function ProductDescription() {
     const { addItemToCart } = useContext(CartContext);
@@ -16,7 +17,7 @@ export default function ProductDescription() {
     
     function addToCart(){
         addItemToCart(art);
-        alert(`added ${name} to cart`)
+        toast.success(`added ${name} to cart`)
     }
     
     return (

@@ -3,6 +3,7 @@ import DropCard from '../components/drop-card/drop-card.component';
 import drops from '../db/drops';
 import Button, { buttonTypes } from '../components/button/button.component';
 
+
 export default function Drop() {
 
   return (

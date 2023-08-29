@@ -10,18 +10,11 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-    //   'blue': '#1fb6ff',
-    //   'pink': '#ff49db',
-    //   'orange': '#ff7849',
-    //   'green': '#13ce66',
-    //   'gray-dark': '#273444',
       'gray': '#292929',
       'gray2': '#333333',
       white: '#FFFFFF',
       black: '#000000',
       blue: '#006CA2',
-
-    //   'gray-light': '#d3dce6',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -36,14 +29,17 @@ module.exports = {
       boxShadow: {
         'sh1': '7.77035px 7.77035px 11.6555px rgba(0, 0, 0, 0.15)',
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      },
+      animation: {
+        'spinn': 'spinn 1s ease-in-out infinite'
+      },
+      keyFrames: {
+        spinn: {
+          '0% 100%' : {
+            transform: 'rotate(360deg)'
+          }
+        }
       }
-      //   spacing: {
-      //     '128': '32rem',
-      //     '144': '36rem',
-      //   },
-      //   borderRadius: {
-      //     '4xl': '2rem',
-      //   }
     }
   },
   plugins: [],
