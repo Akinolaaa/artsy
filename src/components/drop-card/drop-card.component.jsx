@@ -1,7 +1,7 @@
 import CountdownOverlap from '../countdown/countdown-overlap.component';
 
-export default function DropCard({name, imagesrc, status, deadline, creator}) {
-
+export default function DropCard({drop }) {
+  const {name,status,creator,imagesrc} = drop
   const statusBg = {
     live: 'bg-[#3EA03B]',
     ended: 'bg-[#999EA5]',

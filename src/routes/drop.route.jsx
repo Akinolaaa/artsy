@@ -2,9 +2,23 @@ import dropdown from '../assets/dropdown-arrow.png';
 import DropCard from '../components/drop-card/drop-card.component';
 import drops from '../db/drops';
 import Button, { buttonTypes } from '../components/button/button.component';
-
+import { getAllProducts } from '../api/api';
+import { useEffect } from 'react';
 
 export default function Drop() {
+
+  useEffect(()=> {
+    const fetch = async() => {
+      try {
+        const resp = await getAllProducts({name: ''})
+        console.log(resp)
+        
+      } catch (error) {
+        console.log('comething went wrong')
+      }
+    }
+    fetch()
+  })
 
   return (
     <div className='md:px-[2rem] relative left-1/2 -translate-x-1/2 max-w-screen-md'> 
@@ -19,10 +33,9 @@ export default function Drop() {
       </div>
       {
         drops.map(drop => {
-          const {name,status,id,creator,deadline,imagesrc} = drop;
+          const { id } = drop;
           return(
-            <DropCard key={id} name={name} status={status}
-              deadline={deadline} creator={creator} imagesrc={imagesrc}
+            <DropCard key={id} drop={drop} 
             />
           )
         })

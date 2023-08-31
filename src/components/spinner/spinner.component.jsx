@@ -4,10 +4,10 @@ const Spinner = () => {
   
   return(
     <div className="flex justify-center items-center h-screen w-full">
-        <div className='inline-block w-36 h-36 border border-gray border-3 rounded-full border-t-black animate-spin'>
-        </div>
+      <div className='inline-block w-36 h-36 border-4 border-gray rounded-full border-t-white animate-spin'>
+      </div>
     </div>
   )
 }
 
-export default Spinner
+export default Spinner;

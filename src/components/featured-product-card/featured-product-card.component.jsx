@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import irightarrow from '../../assets/right-arrow.svg';
 import iimage0 from '../../assets/series/image.svg';
 import iimage1 from '../../assets/series/image1.svg';
@@ -7,9 +8,10 @@ import iimage4 from '../../assets/series/image4.svg';
 import './featured-product-card.styles.scss';
 
 export default function FeaturedProductCard({name, image, reverse}){
+  const navigate = useNavigate();
   const flexRow = reverse ? 'flex-row-reverse' : ''
   return( 
-    <div className='pb-5 pt-7 border-t-[0.5px] border-gray2'>
+    <div className='pb-5 pt-7 border-t-[0.5px] border-gray2 cursor-pointer' onClick={() => navigate('/product')}>
       <div className={`flex max-sm1:flex-col max-sm1:items-center ${flexRow}`}>
 
         <div className='w-[50%] max-sm1:w-full relative '>

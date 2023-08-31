@@ -1,8 +1,12 @@
 import supabase from "../utils/supabase.utils"
 
 export const getAllProducts = async(options) => {
-  const response = supabase.from('Product').select('*')
+  let response = supabase.from('Product').select('*')
 
+  if (options?.name) {
+    response = response.ilike('name', `%${options?.name}%`)
+  }
+  
   const { data: products, error } = await response;
   if(error) {
     throw new Error("something went wrong")
