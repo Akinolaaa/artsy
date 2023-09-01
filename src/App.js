@@ -4,7 +4,6 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from './components/spinner/spinner.component';
 import Navigation from './components/navigation/navigation.component';
-// const Navigation = lazy(() => import('./components/navigation/navigation.component'));
 
 const Home = lazy(() => import('./routes/home.route'));
 const Product = lazy(() => import('./routes/product.route'));
