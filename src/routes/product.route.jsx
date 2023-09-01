@@ -1,21 +1,39 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectProducts, selectProductSlice } from '../store/product/productSelector';
 import dropdown from '../assets/dropdown-arrow.png';
 import dropdownup from '../assets/dropdown-up.svg';
 // import search from '../assets/search.svg';
 import filter from '../assets/filter.svg'
 import { Link } from 'react-router-dom';
 import Marketplacenav from '../components/marketplace-nav/marketplace-nav';
-import products from '../db/products';
+// import products from '../db/products';
 import rightarrow from "../assets/right-arrow.svg";
 import Footer from "../components/footer/footer.component";
 import ProductCard from '../components/product-card/product-card';
 import "../routes/product-route.styles.scss";
-
-
+import { useDispatch } from 'react-redux';
+import { fetchProduct } from '../store/product/productThunks';
+import { handleChange } from '../store/product/productSlice';
+// import Spinner from '../components/spinner/spinner.component';
 
  export default function Product() {
+  const products = useSelector(selectProducts);
+  const { search } =  useSelector(selectProductSlice);
 
-  
-  
+  const dispatch = useDispatch();
+
+  useEffect(()=> {
+    dispatch(fetchProduct())
+  },[search]);
+
+  const handleSearchChange = (event) => {
+    // if(isLoading) {
+    //   return;
+    // }
+    const { name, value } = event.target;
+    dispatch(handleChange({ name, value }))
+  }
     // function filterArt(event) {
        
     //   const searchString = event.target.value.toLocaleLowerCase();
@@ -24,6 +42,7 @@ import "../routes/product-route.styles.scss";
     //   });
      
     // }
+  
   return(
     <div className="container">
        <div className='firstddiv'>
@@ -33,11 +52,13 @@ import "../routes/product-route.styles.scss";
       <div className='seconddiv'>
             <div className='search1'>
             {/* <img src={search} alt="search"/> */}
-            <input type="search" 
+            <input className='p-1' 
+                  type="search" 
                    id="search" 
-                   name="Search" 
-                   placeholder="Search"
-                  //  onChange={}
+                   name="search" 
+                   value={search}
+                   placeholder="...search"
+                   onChange={handleSearchChange}
                    
               />
             
@@ -117,11 +138,11 @@ import "../routes/product-route.styles.scss";
       </div>
     
       <div className='productmaindiv'>
-      {products.map(product =>   <Link key={product.id} to={`/product/productdescription/${product.id}`}>
+      { products && products.map(product =>   <Link key={product.id} to={`/product/productdescription/${product.id}`}>
                                   <ProductCard
                                   
                                   name={product.name}
-                                  img={product.src}
+                                  img={product.image}
                                   // click={showDescription}
                                   /> 
                                   </Link>

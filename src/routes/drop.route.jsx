@@ -18,7 +18,7 @@ export default function Drop() {
       }
     }
     fetch()
-  })
+  });
 
   return (
     <div className='md:px-[2rem] relative left-1/2 -translate-x-1/2 max-w-screen-md'> 

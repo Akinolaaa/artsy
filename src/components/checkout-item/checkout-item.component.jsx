@@ -3,7 +3,7 @@ import { CartContext } from "../../store/cart-context";
 
 
 export default function CheckoutItem({ checkoutItem }) {
-  const { name, src, price, quantity } = checkoutItem;
+  const { name, image, price, quantity } = checkoutItem;
   
   const { addItemToCart, deleteItemFromCart, removeItemFromCart } = useContext(CartContext);
 
@@ -21,7 +21,7 @@ export default function CheckoutItem({ checkoutItem }) {
 
   return (
     <div className="flex gap-2 border-b border-[#D0BFBF] py-2"> 
-      <img src={src} className='h-[7rem]' alt={`item-${name}`}/>
+      <img src={image} className='h-[7rem]' alt={`item-${name}`}/>
       <div className="flex flex-col justify-between w-full">
         <p>Editorials</p>
         <p>{name}</p>

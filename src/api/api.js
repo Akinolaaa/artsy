@@ -23,3 +23,12 @@ export const getSingleProduct = async(productId) => {
   }
   return products[0];
 }
+
+export const addManyProducts = async(products) => {
+  const { data, error } = await supabase.from('Product').insert([...products]);
+  if(data){
+    console.log("success")
+  } else {
+    console.log(error)
+  }
+}

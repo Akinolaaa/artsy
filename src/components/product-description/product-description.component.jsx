@@ -1,19 +1,21 @@
 import { useContext } from 'react';
+import { useSelector } from 'react-redux';
+import { selectProducts } from '../../store/product/productSelector';
 import './product-description.styles.scss';
 import love from '../../assets/love.svg';
 import { CartContext } from '../../store/cart-context'
 import dropdown from '../../assets/dropdown-arrow.png';
 import Marketplacenav from '../marketplace-nav/marketplace-nav';
-import PRODUCTS from '../../db/products';
 import {  useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export default function ProductDescription() {
     const { addItemToCart } = useContext(CartContext);
     const { artId } = useParams();
-    const art = PRODUCTS.find(art =>  art.id === artId);
+    const products = useSelector(selectProducts);
+    const art = products.find(art =>  art.id === Number(artId));
     
-    const { name, src,price } = art;
+    const { name, image, price, views } = art;
     
     function addToCart(){
         addItemToCart(art);
@@ -29,7 +31,7 @@ export default function ProductDescription() {
         <div className='secondgrid'>
             <div className='productcontainer'>
             <div className='productimage'>
-                <img  src={src} alt=""/>
+                <img  src={image} alt=""/>
             </div>
 
 
@@ -42,7 +44,7 @@ export default function ProductDescription() {
                     <div className='productdetails'>
                     <p>Creator: <span>Ali Dawa {}</span></p>
                     <p>Made in Italy</p>
-                    <p>Total views: 1.7K {}</p>
+                    <p>Total views: {views}</p>
                     </div>
                     <div className='count'>
                         {/* <button onClick={reduceQuantity}>-</button>
