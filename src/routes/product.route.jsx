@@ -1,6 +1,6 @@
 import dropdown from '../assets/dropdown-arrow.png';
 import dropdownup from '../assets/dropdown-up.svg';
-// import search from '../assets/search.svg';
+import search from '../assets/search.png';
 import filter from '../assets/filter.svg'
 import { Link } from 'react-router-dom';
 import "../components/productpage.styles.scss";
@@ -9,8 +9,7 @@ import Products from '../components/product';
 import products from '../db/products';
 import rightarrow from "../assets/right-arrow.svg";
 import Footer from "../components/footer";
-// import { useNavigate } from 'react-router-dom';
-// import { useState } from 'react';
+
 
 
 
@@ -33,19 +32,26 @@ import Footer from "../components/footer";
         <p>Showing 1-5 of 18 results</p>
       </div>
       <div className='seconddiv'>
-            <div className='search1'>
+
+      <div className="search-wrapper">
+            <img className="search-icon" src={search}/>
+            <input  className='search'
+                    type='search' 
+                    placeholder='Search'
+                    // onChange={onChangeHandler}
+            />
+           
+            </div>
+            {/* <div className='search1'>
             {/* <img src={search} alt="search"/> */}
-            <input type="search" 
+            {/* <input type="search" 
                    id="search" 
                    name="Search" 
                    placeholder="Search"
                   //  onChange={}
                    
-              />
-            
-            
-
-            </div>
+              /> */}
+            {/* </div */}
          
          <div>
             <div className='filter1'>
